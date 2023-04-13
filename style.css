@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    background-image: url(./sky.jpg);
+    position: relative;
+    background-size: cover;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-position: center;
+}
+.road{
+    width:500% ;
+    height: 200px;
+    display: block;
+    background-image: url(./road.jpg);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    background-repeat: repeat-x;
+    animation: road  7s linear infinite;
+}
+@keyframes road {
+    100%{
+        transform:translateX(-3400px) ;
+    }
+}
+.city{
+    width: 500%;
+    height: 200px;
+    background-image: url(./city.png);
+    position: absolute;
+    bottom: 200px;
+    right: 0;
+    left: 0;
+    display: block;
+    z-index: 3;
+    background-repeat: repeat-x;
+    animation: city 20s linear infinite;
+}
+@keyframes city {
+    100%{
+        transform:translateX(-1400px) ;
+    }
+}
+.car{
+    width: 400px;
+    bottom: 100px;
+    left: 50%;
+    position: absolute;
+    z-index: 3;
+    transform: translateX(-50%);
+}
+.car img{
+    width: 100%;
+    animation: car 1s linear infinite ;
+}
+@keyframes car {
+    100%{
+        transform:translateY(-1px) ;
+    }
+    50%{
+        transform:translateY(1px) ;
+    }
+    0%{
+        transform:translateY(-1px) ;
+    }
+}
+.wheels{
+    bottom: 178px;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.wheels img{
+    height: 72px;
+    width: 72px;
+    animation: wheels 1s linear infinite;
+}
+.back-wheel{
+    left: -165px;
+    position: absolute;
+}
+.front-wheel{
+    left: 80px;
+    position: absolute;
+}
+@keyframes wheels {
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.sun img{
+    height: 170vh;
+    width: 100%;
+    position: absolute;
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center;
+    z-index: 1;
+    animation: sun 50s linear infinite;
+}
+@keyframes sun {
+    100%{
+        transform:rotate(360deg);
+    }
+}
+.cloud img{
+    width:300px;
+    height: 230px;
+    display: block;
+    right: 0;
+    top: 0;
+    position: absolute;
+    z-index: 2;
+    background-repeat: repeat-x;
+    animation: cloud 30s linear infinite;
+}
+@keyframes cloud {
+    100%{
+        transform:translateX(-1300px) ;
+    }
+}
+.cloud2 img{
+    width:300px;
+    height: 230px;
+    display: flex;
+    left: 0;
+    top: 30px;
+    position: absolute;
+    z-index: 1;
+    background-repeat: repeat-x;
+    animation: cloud2 20s linear infinite;
+}
+@keyframes cloud2 {
+    100%{
+        transform:translateX(1300px) ;
+    }
+}
